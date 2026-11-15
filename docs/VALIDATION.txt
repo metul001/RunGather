@@ -1,0 +1,102 @@
+RunGather 0.3.0
+Automated verification output
+
+
+> bangladesh-event-platform@0.3.0 check
+> npm run typecheck && npm test && npm run test:database
+
+
+> bangladesh-event-platform@0.3.0 typecheck
+> tsc --noEmit
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+
+> bangladesh-event-platform@0.3.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ Bangladesh calendar midnight, leap year and week boundaries (1.933457ms)
+✔ Timezone conversion rejects invalid date/time (0.550761ms)
+✔ No invented ratings; secure links only (0.162776ms)
+✔ All eight divisions, districts, category, search and date filtering (6.955123ms)
+✔ Calendar counts exclude cancellations; ordering and prices (0.236207ms)
+✔ Bangla UI dictionary preserves unknown content and English fallback (0.85458ms)
+✔ Performance metrics are bounded, sanitized and compute nearest-rank percentiles (1.479161ms)
+✔ Offline snapshots reject expired, corrupt and cross-account data (0.451641ms)
+✔ Offline chunk storage commits complete copies and clears account isolation (2.224676ms)
+✔ Interrupted offline writes retain the last complete snapshot (0.320493ms)
+✔ Offline chunks preserve emoji across storage boundaries and cap large snapshots (3.582154ms)
+✔ Backend image guard accepts only permitted signatures (2.065226ms)
+✔ Backend byte limit counts actual streamed bytes (0.685484ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 437.645657
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+
+> bangladesh-event-platform@0.3.0 test:database
+> node --import tsx tests/database.ts
+
+PASS All 8 divisions and 64 districts seeded; no events or ratings fabricated
+PASS Private profiles, role escalation and unauthenticated RPC protected
+PASS Pending organizer hidden; administrator requires MFA
+PASS Event approval, ownership and division/district constraints
+PASS Transport validates input, enforces ownership and requires reapproval
+PASS Server search is bounded, literal, stable and honors RLS and saved privacy
+PASS Search pages have deterministic ties, Bangla token matching and no pending listings
+PASS Verified transport enforces MFA, ownership, inventory and private reservations
+PASS Private saves and registration records enforce ownership
+PASS Reviews require attendance and completed event; no direct spoofing
+PASS Attendance, moderation and computed average use actual rows
+PASS Updating a review replaces rather than duplicates and returns to moderation
+PASS Organizer replies, reports and admin audit log authorization
+PASS Notifications private and content immutable; worker functions service-only
+PASS Suspensions block writes and hide organizer events
+PASS Image publication cannot use another owner path; uploads rate limited
+PASS Private image reads require ownership or an approved referencing listing
+PASS Verification requests are private, unique while pending and admin controlled
+PASS Profile edits reset verification and hide public catalogue until reapproval
+PASS Public reference data cannot be changed without MFA administration
+PASS Push devices are private, rate-gated and reassigned on account change
+21 database integration scenarios passed. Auth email transport, HTTP gateway, storage binary validation and mobile UI are not covered by embedded PostgreSQL.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+
+Android/iOS bundle compilation:
+Starting Metro Bundler
+
+iOS Bundled 7337ms index.ts (742 modules)
+Android Bundled 13044ms index.ts (746 modules)
+
+› ios bundles (1):
+_expo/static/js/ios/index-a1b0f4d11c12a0abb059e9c5807f7d91.hbc (2.3MB)
+
+› android bundles (1):
+_expo/static/js/android/index-bd4bb7391377d3ff779f5d49af2fa41d.hbc (2.3MB)
+
+› Files (1):
+metadata.json (244B)
+
+Exported: /workspace/work/mobile-export-final
+
+Dependency audit: see DEPENDENCY-AUDIT.json
+Native device and hosted-provider acceptance remain to be run.

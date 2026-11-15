@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "RunGather Bangladesh",
+    "slug": "bangladesh-event-platform",
+    "scheme": "rungather",
+    "version": "0.3.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.rungather.bangladesh",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.rungather.bangladesh",
+      "permissions": [
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose an event cover or organizer logo.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "icon": "./assets/icon.png"
+  }
+}
